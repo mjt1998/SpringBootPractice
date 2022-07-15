@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/lombok")
 @Slf4j
-public class lombokController {
+public class ForStudentController {
 
     @GetMapping("/insertStudent")
     public String insertStudent(int id, String name, int age, String gender){

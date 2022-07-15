@@ -26,7 +26,6 @@ public class ForStudentController {
 
     @GetMapping("/selectAllStudent")
     public String selectAllStudent(){
-//        StudentService studentService = new StudentServiceImpl();
         List<Student> studentList = studentService.getStudentList();
         for (Student student : studentList) {
             System.out.println(student.toString());
@@ -34,11 +33,4 @@ public class ForStudentController {
         return studentList.toString();
     }
 
-//    @GetMapping("/selectStudentById")
-//    public String selectStudentById(){
-//        StudentService studentService = new StudentServiceImpl();
-//        Student studentById = studentService.findStudentById(2);
-//        log.info(studentById.toString());
-//        return studentById.toString();
-//    }
 }

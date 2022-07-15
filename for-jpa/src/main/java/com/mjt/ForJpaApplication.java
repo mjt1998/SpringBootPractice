@@ -11,6 +11,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  * @Author mjt
  * @Time 2022/6/25
  */
+@EnableJpaAuditing
 @SpringBootApplication
 public class ForJpaApplication {
     public static void main(String[] args) {

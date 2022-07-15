@@ -13,7 +13,5 @@ import java.util.List;
 @Service
 public interface StudentService {
 
-//    public Student findStudentById(long id);
-
     public List<Student> getStudentList();
 }
