@@ -2,6 +2,7 @@ package com.mjt.controller;
 
 import com.mjt.pojo.Article;
 import com.mjt.repository.ArticleRepository;
+import com.mjt.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -25,13 +26,16 @@ public class ArticleController {
     @Autowired
     private ArticleRepository articleRepository;
 
+    @Autowired
+    private ArticleService articleService;
+
     /**
      *
      * @Description: 获取文章列表
      * @Author mjt
      * @Date 2022/7/15
      */
-    @RequestMapping("")
+    @RequestMapping("/articleList")
     public ModelAndView articleList(@RequestParam(value = "start", defaultValue = "0") Integer start,
                                     @RequestParam(value = "limit", defaultValue = "5") Integer limit){
 
@@ -59,6 +63,17 @@ public class ArticleController {
     }
 
 
+    /**
+     *
+     * @Description:
+     * @Author mjt
+     * @Date 2022/7/17
+     */
+    @RequestMapping("/findArticleById")
+    public Article findArticleById(Integer id){
+        Article article = articleService.findArticleById(id);
+        return article;
+    }
 
 
 
